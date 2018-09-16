@@ -1,0 +1,99 @@
+{
+  "openapi" : "3.0.1",
+  "info" : {
+    "title" : "JSON Server Demo",
+    "description" : "Description",
+    "version" : "0.1-oas3"
+  },
+  "servers" : [ {
+    "url" : "http://localhost"
+  } ],
+  "paths" : {
+    "/employees/{id}" : {
+      "get" : {
+        "parameters" : [ {
+          "in" : "path",
+          "name" : "id",
+          "schema" : {
+            "type" : "integer"
+          },
+          "description" : "Numeric ID of the user to get"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Auto generated using Swagger Inspector",
+            "content" : {
+              "application/json; charset=utf-8" : {
+                "schema" : {
+                  "type" : "string"
+                },
+                "examples" : { }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/employees" : {
+      "get" : {
+        "description" : "Auto generated using Swagger Inspector",
+        "responses" : {
+          "200" : {
+            "description" : "Auto generated using Swagger Inspector",
+            "content" : {
+              "application/json; charset=utf-8" : {
+                "schema" : {
+                  "type" : "string"
+                },
+                "examples" : { }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/employees/" : {
+      "post" : {
+        "description" : "Auto generated using Swagger Inspector",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "type" : "object",
+                "properties" : {
+                  "last_name" : {
+                    "type" : "string"
+                  },
+                  "first_name" : {
+                    "type" : "string"
+                  },
+                  "email" : {
+                    "type" : "string"
+                  }
+                }
+              },
+              "examples" : {
+                "0" : {
+                  "value" : "{\n    \"first_name\": \"Sebastian\",\n    \"last_name\": \"Eschweiler\",\n    \"email\": \"sebastian@codingthesmartway.com\"\n}"
+                }
+              }
+            }
+          }
+        },
+        "responses" : {
+          "201" : {
+            "description" : "Auto generated using Swagger Inspector",
+            "content" : {
+              "application/json; charset=utf-8" : {
+                "schema" : {
+                  "type" : "string"
+                },
+                "examples" : { }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

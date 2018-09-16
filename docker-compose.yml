@@ -1,0 +1,18 @@
+version: '2'
+
+services:
+  jsonserver:
+    image: clue/json-server
+    ports:
+      - "80:80"
+    volumes:
+      - ${PWD}/db.json:/data/db.json
+  
+  swagger-ui:
+    image: swaggerapi/swagger-ui
+    ports:
+      - "8282:8080"
+    volumes:
+      - ${PWD}/swagger-3.0.1.json:/app/swagger.json
+
+
